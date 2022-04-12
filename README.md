@@ -44,8 +44,10 @@ in main.cpp.
 
 ### 1-4: To adjust a beam-hardening correction
 We provided a beam-hardening correction model applied in Ref: Kai-Wen Li, et al., Physica Medica, v89, p182, 2021.
+This is performed to run the code, "beam_hardening_correction.cpp".
 
-Usage:
+Usage is here.
+
 0. Prepare sinogram (projection image)
       ex. reprojection_float.raw
 1. Compile as gcc beam_hardening_correction.cpp
