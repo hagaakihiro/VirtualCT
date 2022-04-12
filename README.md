@@ -2,23 +2,19 @@
 This project provides a virtual fan CT system with an elementary information for objects.
 This is composed of two basic codes,
 
-1. material based forward projection algorithm (MBFPA),
- 
+1. material based forward projection algorithm (MBFPA),   
 2. Fltered back projection (FBP).
 
 The former includes the simple beam-hardening correction algorithm as well as the signal noise model.
 
 Plese cite the following papars for use.
 
-Ref: Akihiro Haga, et al., Radiation Oncology, v9, 2014
+Ref: Akihiro Haga, et al., Radiation Oncology, v9, 2014  
+Ref: Kai-Wen Li, et al., Br J Radiol, 2021  
+Ref: Kai-Wen Li, et al., Physica Medica, v89, p182, 2021  
+Ref: Daiyu Fujiwara, et al., in preparation
 
-Ref: Kai-Wen Li, et al., Br J Radiol, 2021
-
-Ref: Kai-Wen Li, et al., Physica Medica, v89, p182, 2021
-
-Ref: Daiyu Fujiwara, et al., ***
-
-{\bf GPU version is not free, but can be distributed for some specific boards. Plase contact us by e-mail.}
+**GPU version is not free, but can be distributed for some specific GPU boards. Contact us by e-mail.**
 
 
 ## 1: For use of material based forward projection algorithm (MBFPA) code
@@ -38,17 +34,12 @@ We note that the original code is for ICRP110 human phantom (6 elements). If one
 
 ### 1-2: How to execute
 
-0. Prepare elementary density image and incident X-ray spectrum
-
-      ex. Weight_input_ICRU110.raw, Spectrum/PhaseSpace_photon_120kV_0cm.txt
-      
-1. make
-
-2. mvct.exe (input.txt)
-
-      ex. mvct.exe IR_TOMO_input_virtual_projection_120kV.txt
-      
-3. output image is producted (as "reprojection_float.raw")
+0. Prepare elementary density image and incident X-ray spectrum  
+      ex. Weight_input_ICRU110.raw, Spectrum/PhaseSpace_photon_120kV_0cm.txt  
+1. make  
+2. mvct.exe (input.txt)  
+      ex. mvct.exe IR_TOMO_input_virtual_projection_120kV.txt        
+3. output image is producted (as "reprojection_float.raw")  
 
 The datatype of the projection image is a 32-bit real, 609 $\times$ 800 in the original geometory. 
 
@@ -66,16 +57,11 @@ This is performed to run the code, "beam_hardening_correction.cpp".
 
 Usage is here.
 
-0. Prepare sinogram (projection image)
-
-      ex. reprojection_float.raw
-      
-1. Compile as gcc beam_hardening_correction.cpp
-
-2. ./a.out "alpha" "beta"
-
-      ex. ./a.out 0.01 2.00 (for kV CT) or ./a.out 0.01 3.70 (for MV CT)
-      
+0. Prepare sinogram (projection image)  
+      ex. reprojection_float.raw        
+1. Compile as gcc beam_hardening_correction.cpp  
+2. ./a.out "alpha" "beta"  
+      ex. ./a.out 0.01 2.00 (for kV CT) or ./a.out 0.01 3.70 (for MV CT)        
 3. output image is producted (as "reprojection_float_cor.raw")
 
 Note that "alpha" and "beta" could depend on CT geometory(SDD, SID, Det.size etc.)/protocol(angle interval etc.) as well as the photon energy and phantom size.
@@ -93,16 +79,11 @@ Note that the same geometry as that used in the MBFPA should be employed there.
 
 ### 2-2: How to execute
 
-0. Prepare sinogram (projection image)
-
-      ex. reprojection_float.raw from "Release_MBFPA_CPU_human/"
-      
-1. make
-
-2. mvct.exe (input.txt)
-
-      ex. mvct.exe TOMO_input_virtual_projection_human.txt
-
-3. output image is producted (as "FBP_virtual_projection_512x512_human.raw")
+0. Prepare sinogram (projection image)  
+      ex. reprojection_float.raw from "Release_MBFPA_CPU_human/"  
+1. make  
+2. mvct.exe (input.txt)  
+      ex. mvct.exe TOMO_input_virtual_projection_human.txt  
+3. output image is producted (as "FBP_virtual_projection_512x512_human.raw")  
 
 The datatype of the reconstructed image is a 32-bit real, 512 $\times$ 512. 
