@@ -44,6 +44,7 @@ in main.cpp.
 
 ### 1-4: To adjust a beam-hardening correction
 We provided a beam-hardening correction model applied in Ref: Kai-Wen Li, et al., Physica Medica, v89, p182, 2021.
+
 Usage:
 0. Prepare sinogram (projection image)
       ex. reprojection_float.raw
