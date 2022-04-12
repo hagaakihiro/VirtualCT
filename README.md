@@ -15,7 +15,7 @@ Ref: Daiyu Fujiwara, et al., ***
 ### 1-1: Preparation
 Go to "Release_MBFPA_CPU_human/"
 It is required to prepare an object including the elementary information and an X-ray spectrum before runing the code.
-The elementary information of the ICRP110 human phantom and the digital Gammex phantom has been uploaded as the examples (Weight_input_ICRU110.raw and Weight_input_gammex.raw), both of which the datatype is the 16-bit unsigned, 512 \times 512.
+The elementary information of the ICRP110 human phantom and the digital Gammex phantom has been uploaded as the examples (Weight_input_ICRU110.raw and Weight_input_gammex.raw), both of which the datatype is the 16-bit unsigned, 512 $\times$ 512.
 For human phantom, six major elements, H, C, N, O, P, and Ca, are included, whereas for Gammex phantom, eight major elements, H, C, N, O, P, Ca, Mg, and Si are included. We provided the creation code of digital Gammex phantom (phantom_creation_Gammex.cpp).
 The 120 kV and 6 MV X-ray spectra were also provided within "Spectrum/" folder, which are simulated with a radiotherapy machine (ELEKTA Synergy). One can apply any energy spectrum with changing this file (first and second rows mean the first and last points in energy bin, and third row means the fraction for photons).
 
@@ -40,7 +40,7 @@ We note that the original code is for ICRP110 human phantom (6 elements). If one
       
 3. output image is producted (as "reprojection_float.raw")
 
-The datatype of the projection image is a 32-bit real, 609 \times 800 in the original geometory. 
+The datatype of the projection image is a 32-bit real, 609 $\times$ 800 in the original geometory. 
 
 ### 1-3: To adjust a signal noise
 The photon noise on the virtual detector is controlled by the parameter
@@ -95,4 +95,4 @@ Note that the same geometry as that used in the MBFPA should be employed there.
 
 3. output image is producted (as "FBP_virtual_projection_512x512_human.raw")
 
-The datatype of the reconstructed image is a 32-bit real, 512 \times 512. 
+The datatype of the reconstructed image is a 32-bit real, 512 $\times$ 512. 
