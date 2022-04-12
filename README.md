@@ -28,10 +28,15 @@ We note that the original code is for ICRP110 human phantom (6 elements). If one
 ### 1-2: How to execute
 
 0. Prepare elementary density image and incident X-ray spectrum
+
       ex. Weight_input_ICRU110.raw, Spectrum/PhaseSpace_photon_120kV_0cm.txt
+      
 1. make
+
 2. mvct.exe (input.txt)
+
       ex. mvct.exe IR_TOMO_input_virtual_projection_120kV.txt
+      
 3. output image is producted (as "reprojection_float.raw")
 
 ### 1-3: To adjust a signal noise
@@ -49,11 +54,17 @@ This is performed to run the code, "beam_hardening_correction.cpp".
 Usage is here.
 
 0. Prepare sinogram (projection image)
+
       ex. reprojection_float.raw
+      
 1. Compile as gcc beam_hardening_correction.cpp
+
 2. ./a.out "alpha" "beta"
+
       ex. ./a.out 0.01 2.00 (for kV CT) or ./a.out 0.01 3.70 (for MV CT)
+      
 3. output image is producted (as "reprojection_float_cor.raw")
+
 Note that "alpha" and "beta" could depend on CT geometory(SDD, SID, Det.size etc.)/protocol(angle interval etc.) as well as the photon energy and phantom size.
 
 
