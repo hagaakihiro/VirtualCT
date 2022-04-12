@@ -13,6 +13,7 @@ Ref: Daiyu Fujiwara, et al., ***
 
 ## 1: For use of material based forward projection algorithm (MBFPA) code
 ### 1-1: Preparation
+Go to "Release_MBFPA_CPU_human/"
 It is required to prepare an object including the elementary information and an X-ray spectrum before runing the code.
 The elementary information of the ICRP110 human phantom and the digital Gammex phantom has been uploaded as the examples (Weight_input_ICRU110.raw and Weight_input_gammex.raw), both of which the datatype is the 16-bit unsigned, 512 \times 512.
 For human phantom, six major elements, H, C, N, O, P, and Ca, are included, whereas for Gammex phantom, eight major elements, H, C, N, O, P, Ca, Mg, and Si are included. We provided the creation code of digital Gammex phantom (phantom_creation_Gammex.cpp).
@@ -38,6 +39,8 @@ We note that the original code is for ICRP110 human phantom (6 elements). If one
       ex. mvct.exe IR_TOMO_input_virtual_projection_120kV.txt
       
 3. output image is producted (as "reprojection_float.raw")
+
+The datatype of the projection image is a 32-bit real, 609 \times 800 in the original geometory. 
 
 ### 1-3: To adjust a signal noise
 The photon noise on the virtual detector is controlled by the parameter
@@ -71,5 +74,25 @@ Note that "alpha" and "beta" could depend on CT geometory(SDD, SID, Det.size etc
 
 ## 2: For use of Fltered back projection (FBP) code
 ### 2-1: Preparation
+Go to "Release_FBP_CPU/".
+It is required for CT reconstruction to prepare the projection data (sinogram).
+An example is "reprojection_float.raw" or "reprojection_float_cor.raw".
+The information of the sinogram must be indicated in the input txt file as,
+"IR_TOMO_input_virtual_projection_6MV.txt" for MVCT reconstrcution.
+Note that the same geometry as that used in the MBFPA should be employed there.
 
 ### 2-2: How to execute
+
+0. Prepare sinogram (projection image)
+
+      ex. reprojection_float.raw from "Release_MBFPA_CPU_human/"
+      
+1. make
+
+2. mvct.exe (input.txt)
+
+      ex. mvct.exe TOMO_input_virtual_projection_human.txt
+
+3. output image is producted (as "FBP_virtual_projection_512x512_human.raw")
+
+The datatype of the reconstructed image is a 32-bit real, 512 \times 512. 
