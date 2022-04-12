@@ -1,0 +1,69 @@
+//////////////////////////////////////////////////////// 
+// 
+//    This is an input file for Fan Beam CT reconstruction 
+//    Do NOT remove this header, blank and comment lines 
+//    Ver. 2 (2020.01.22) FBP from Virtual Projection
+//////////////////////////////////////////////////////// 
+
+// Energy Label (IN : 6MV, PR : 3.5MV)
+PR
+
+// Filter Label (1 : Ram-Lak, 2 : Shepp Logan)
+2
+
+// sinogram width 
+609
+
+// sinogram height 
+800
+ 
+// Data type
+float 
+
+// projection image file header bytes 
+0 
+ 
+// sinogram image data for input 
+../Ver.4_MDIR_GPU_gammex/reprojection_float_gpu.raw
+
+// Air scan image data for input // parameters are fixed
+*
+
+//Gantry rotation period [s]
+10
+
+//Data sampling rate [Hz]
+80
+
+//Starting view angle [degree]
+0
+
+//Couch speed [cm/rotation] // 0.4=fine, 0.8=normal, 1.2=coarse
+0.0
+
+//Start couch position [cm]
+0.0
+  
+// reconstruction size (square format) 
+512 
+
+// reconstruction pixel size [cm]
+0.1 
+ 
+// reconstruction target class string (used for gating, etc.) 
+* 
+ 
+// reconstruction start z [cm]
+0.0
+ 
+// reconstruction z step [cm]
+0.2 
+ 
+// reconstruction slices 
+1
+ 
+// Factor for output CT value 
+1 
+ 
+// reconstructed data file for output 
+FBP_virtual_projection_512x512_gammex.raw
