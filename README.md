@@ -15,6 +15,7 @@ The 120 kV and 6 MV X-ray spectra were also provided within "Spectrum/" folder, 
 
 The information of the object and the spectrum must be indicated in the input txt file (IR_TOMO_input_virtual_projection_6MV.txt and IR_TOMO_input_virtual_projection_120kV.txt are the example).
 
+We note that the original code is for ICRP110 human phantom (6 elements). If one wants to simulate with Gammex phantom, "number of elements" and some lines of prior_weight_production.cpp need to be modified. We are sorry for this inconvenient.
 
 ### 1-2: How to execute
 
