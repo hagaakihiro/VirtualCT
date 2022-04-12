@@ -1,0 +1,100 @@
+//////////////////////////////////////////////////////// 
+// 
+//    This is an input file to make projections in Fan Beam geometry 
+//    Do NOT remove this header, blank and comment lines 
+//    Ver. 4 (2020.1.23)
+//////////////////////////////////////////////////////// 
+
+// Energy Label (IN (for treatment beam) or PR (for CT))
+PR
+
+// Prior image ON/OFF (0: no prior, 1: planCT, 2: MVCT)
+0
+
+// sinogram width 
+609 
+ 
+// sinogram height 
+800
+ 
+// Data type
+float 
+
+// projection image file header bytes 
+0 
+ 
+// sinogram image data for input 
+*
+
+// Air scan image data for input // parameters are fixed
+*
+
+//Gantry rotation period [s]
+10
+
+//Data sampling rate [Hz]
+80
+
+//Starting view angle [degree]
+0
+
+//Couch speed [cm/rotation] // 0.4=fine, 0.8=normal, 1.2=coarse
+0.0
+
+//Start couch position [cm]
+0.0
+  
+// reconstruction size (square format) 
+512 
+
+// reconstruction pixel size [cm]
+0.1
+ 
+// reconstruction target class string (used for gating, etc.) 
+* 
+ 
+// reconstruction start z [cm]
+0.0
+ 
+// reconstruction z step [cm]
+0.1 
+ 
+// reconstruction slices 
+1
+ 
+// Factor for output CT value 
+1 
+ 
+// reconstruction file name (prior image)
+*
+
+// number of reconstructed slices (prior image)
+1
+
+// Prior image shift 
+0.0 0.0 0.0
+
+// ScanListZvalue
+0.0
+
+// Thin out for OSEM (NOT used)
+10
+
+// Constants for regularization terms' weight // TV, Prior, Other (NOT used)
+0.0001 0.0 0.0
+
+// Gradient Decent constant (NOT used)
+0.01
+
+// Number of iteration (NOT used)
+500
+
+// Sinogram factor (NOT used)
+1
+
+// Spectrum data name
+Spectrum/PhaseSpace_photon_6MV_0cm.txt
+
+// Photon noise in detector (projection_min = (0.00199,0.000336,0.000537,0.101064)) 80,100,120kV,6MV
+0.0000537
+
