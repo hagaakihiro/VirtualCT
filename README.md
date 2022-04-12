@@ -18,6 +18,9 @@ Ref: Kai-Wen Li, et al., Physica Medica, v89, p182, 2021
 
 Ref: Daiyu Fujiwara, et al., ***
 
+{\bf GPU version is not free, but can be distributed for some specific boards. Plase contact us by e-mail.}
+
+
 ## 1: For use of material based forward projection algorithm (MBFPA) code
 ### 1-1: Preparation
 Go to "Release_MBFPA_CPU_human/"
