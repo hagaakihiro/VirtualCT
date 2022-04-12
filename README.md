@@ -45,13 +45,13 @@ in main.cpp.
 ### 1-4: To adjust a beam-hardening correction
 We provided a beam-hardening correction model applied in Ref: Kai-Wen Li, et al., Physica Medica, v89, p182, 2021.
 -- Usage --
-//   0. Prepare sinogram (projection image)
-//      ex. reprojection_float.raw
-//   1. Compile as gcc beam_hardening_correction.cpp
-//   2. ./a.out "alpha" "beta"
-//      ex. ./a.out 0.01 2.00 (for kV CT) or ./a.out 0.01 3.70 (for MV CT)
-//   3. output image is producted (as "reprojection_float_cor.raw")
-//   Note that "alpha" and "beta" could depend on CT geometory(SDD, SID, Det.size etc.)/protocol(angle interval etc.) as well as the photon energy and phantom size.
+0. Prepare sinogram (projection image)
+      ex. reprojection_float.raw
+1. Compile as gcc beam_hardening_correction.cpp
+2. ./a.out "alpha" "beta"
+      ex. ./a.out 0.01 2.00 (for kV CT) or ./a.out 0.01 3.70 (for MV CT)
+3. output image is producted (as "reprojection_float_cor.raw")
+Note that "alpha" and "beta" could depend on CT geometory(SDD, SID, Det.size etc.)/protocol(angle interval etc.) as well as the photon energy and phantom size.
 
 
 
