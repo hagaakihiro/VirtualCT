@@ -36,7 +36,7 @@ We note that the original code is for ICRP110 human phantom (6 elements). If one
 
 ### 1-3: To adjust a signal noise
 The photon noise on the virtual detector is controlled by the parameter
-// Photon noise in detector
+"Photon noise in detector"
 in the input txt file
 The noise model is based on a Gaussian distribution. One can change it by modifing the function,
 gaussiannoise0
@@ -44,7 +44,7 @@ in main.cpp.
 
 ### 1-4: To adjust a beam-hardening correction
 We provided a beam-hardening correction model applied in Ref: Kai-Wen Li, et al., Physica Medica, v89, p182, 2021.
--- Usage --
+Usage:
 0. Prepare sinogram (projection image)
       ex. reprojection_float.raw
 1. Compile as gcc beam_hardening_correction.cpp
