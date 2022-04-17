@@ -27,8 +27,8 @@ The 120 kV and 6 MV X-ray spectra were also provided within "Spectrum/" folder, 
 
 The information of the object and the spectrum must be indicated in the input txt file (IR_TOMO_input_virtual_projection_6MV.txt and IR_TOMO_input_virtual_projection_120kV.txt are the example).
 
-The geometry cah be varied by modifing parameters listed in physParamsTOMO.h.
-The original values can simulate projections in the geometry of helical tomothrapy.
+The geometry can be varied by modifying parameters listed in physParamsTOMO.h, where
+the original values simulate projections in the geometry of helical tomothrapy.
 
 We note that the original code is for ICRP110 human phantom (6 elements). If one wants to simulate with Gammex phantom, "number of materials" and some lines of prior_weight_production.cpp need to be modified.
 
@@ -37,8 +37,8 @@ We note that the original code is for ICRP110 human phantom (6 elements). If one
 0. Prepare elementary density image and incident X-ray spectrum  
       ex. Weight_input_ICRU110.raw, Spectrum/PhaseSpace_photon_120kV_0cm.txt  
 1. make  
-2. mvct.exe (input.txt)  
-      ex. mvct.exe IR_TOMO_input_virtual_projection_120kV.txt        
+2. ./mvct.exe (input.txt)  
+      ex. ./mvct.exe IR_TOMO_input_virtual_projection_120kV.txt        
 3. output image is producted (as "reprojection_float.raw")  
 
 The datatype of the projection image is a 32-bit real, 609 $\times$ 800 in the original geometory. 
@@ -52,8 +52,8 @@ gaussiannoise0
 in main.cpp.
 
 ### 1-4: To adjust a beam-hardening correction
-We provided a beam-hardening correction model applied in Ref: Kai-Wen Li, et al., Physica Medica, v89, p182, 2021.
-This is performed to run the code, "beam_hardening_correction.cpp".
+We provided a beam-hardening correction model, which has been applied in Ref: Kai-Wen Li, et al., Physica Medica, v89, p182, 2021.
+This is performed by running the code, "beam_hardening_correction.cpp".
 
 Usage is here.
 
@@ -65,7 +65,7 @@ Usage is here.
 3. output image is producted (as "reprojection_float_cor.raw")
 
 Note that "alpha" and "beta" could depend on CT geometory(SDD, SID, Det.size etc.)/protocol(angle interval etc.) as well as the photon energy and phantom size.
-
+Therefore, it is recommended that these parameters are optimized by a homogeneity check with a water phantom or something like that.
 
 
 ## 2: For use of Fltered back projection (FBP) code
@@ -82,8 +82,8 @@ Note that the same geometry as that used in the MBFPA should be employed there.
 0. Prepare sinogram (projection image)  
       ex. reprojection_float.raw from "Release_MBFPA_CPU_human/"  
 1. make  
-2. mvct.exe (input.txt)  
-      ex. mvct.exe TOMO_input_virtual_projection_human.txt  
+2. ./mvct.exe (input.txt)  
+      ex. ./mvct.exe TOMO_input_virtual_projection_human.txt  
 3. output image is producted (as "FBP_virtual_projection_512x512_human.raw")  
 
 The datatype of the reconstructed image is a 32-bit real, 512 $\times$ 512. 
