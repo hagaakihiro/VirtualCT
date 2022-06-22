@@ -9,12 +9,11 @@ The former includes the simple beam-hardening correction algorithm as well as th
 
 Plese cite the following papars for use.
 
-Ref: Akihiro Haga, et al., Radiation Oncology, v9, 2014  
-Ref: Kai-Wen Li, et al., Br J Radiol, 2021  
-Ref: Kai-Wen Li, et al., Physica Medica, v89, p182, 2021  
-Ref: Daiyu Fujiwara, et al., in preparation
+Ref: Kai-Wen Li, et al., Physical density estimations of single- and dual-energy CT using material-based forward projection algorithm: a simulation study, Br J Radiol, 2021  
+Ref: Kai-Wen Li, et al., kV-kV and kV-MV DECT based estimation of proton stopping power ratio - a simulation study, Physica Medica, v89, p182, 2021  
+Ref: Daiyu Fujiwara, et al., Virtual computed-tomography system for deep-learning-based material decomposition, Physics in Medicine and Biology, 2022
 
-**GPU version is not free, but can be distributed for some specific GPU boards. Contact us by e-mail.**
+**GPU version is not free, but can be distributed for some specific GPU boards. Contact us by e-mail. haga@tokushima-u.ac.jp
 
 
 ## 1: For use of material based forward projection algorithm (MBFPA) code
